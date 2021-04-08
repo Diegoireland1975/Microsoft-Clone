@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#logo {
+  width: 110px;
+  margin-right: 1rem;
+}
+
+.icon {
+  width: 1rem;
+  display: inline-block;
+}
+
+.icon-social {
+  width: 2rem;
+  display: inline-block;
+}
+/* Toggle */
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  opacity: 0.5;
+}
+/* Navbar */
+.main-nav {
+  height: 60px;
+  font-size: 0.8rem;
+}
+.main-nav .flex {
+  align-items: flex-start;
+}
+
+.main-nav li {
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted #ccc;
+}
+
+.main-nav li:last-child {
+  border-bottom: 0;
+}
+
+.main-nav a {
+  padding-bottom: 2px;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid #262626;
+}
+
+.main-nav .main-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f2f2f2;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  opacity: 0.9;
+  transform: translateX(-500px);
+  transition: 0.4s ease;
+}
+
+.main-nav .main-menu.show {
+  transform: translateX(0);
+}
+.right-menu {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.right-menu li {
+  border: 0;
+}
+
+/* Showcase */
+.showcase {
+  background: url(../img/slide1.png) no-repeat center center/cover;
+  background-color: #555;
+  background-blend-mode: overlay;
+  height: 90vh;
+}
+
+.showcase .content {
+  justify-content: flex-end;
+  height: 80vh;
+}
+
+/* .showcase .btn {
+  margin-top: 1rem;
+} */
+
+/* Cards */
+.card .title-card {
+  margin-top: 1rem;
+}
+
+/* Xbox-section */
+.xbox {
+  background: url(../img/xbox.png) no-repeat center center/cover;
+}
+.xbox .flex,
+.carbon .flex {
+  align-items: flex-start;
+  height: 50vh;
+}
+
+/* Carbon section */
+.carbon {
+  background: url(../img/carbon.jpg) no-repeat center center/cover;
+  background-color: #333;
+  background-blend-mode: overlay;
+}
+
+/* Follow section */
+.follow {
+  display: flex;
+  align-items: center;
+}
+
+.follow a {
+  margin-left: 1rem;
+}
+
+/* Footer */
+.main-footer {
+  background: #f2f2f2;
+  color: #616161;
+  font-size: 0.8rem;
+}
+
+.main-footer .flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.main-footer ul {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.main-footer li {
+  margin-bottom: 1rem;
+}
+
+.bottom-footer {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bottom-footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.bottom-footer div i {
+  margin-right: 10px;
+}
+.bottom-footer ul {
+  flex-direction: row;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.bottom-footer li {
+  margin-bottom: 1rem;
+}
+/* ################# */
+/* MEDIA QUERIES */
+/* ################ */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+  .main-nav .flex {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .main-nav li {
+    border: 0;
+    margin: 0;
+  }
+
+  .main-nav .main-menu {
+    display: flex;
+    margin-right: auto;
+    position: initial;
+    background: transparent;
+    border: 0;
+    transform: translateX(0);
+  }
+
+  .right-menu {
+    display: flex;
+    position: initial;
+  }
+  /* cards */
+  .cards .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* xbox */
+  .xbox .hide-sm {
+    display: initial;
+  }
+
+  .xbox .flex {
+    width: 40%;
+  }
+
+  /* Carbon */
+  .carbon .flex {
+    width: 55%;
+  }
+
+  /* footer */
+  .main-footer ul {
+    width: auto;
+  }
+
+  .bottom-footer div {
+    margin-bottom: 0;
+  }
+
+  .bottom-footer li {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
